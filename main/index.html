@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youth Professionals</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="images/yp_logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/yp_logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Get Involved</a>
+      <div id="indicator"></div>
+    </nav>
+    <div class="title">
+      <h1>Welcome to Youth Professionals!</h1>
+    </div>
+    <div class="column">
+      <h3>Who are we?</h3>
+      <p>
+        Youth Professionals is an international nonprofit organization dedicated
+        towards supporting BIPOC and LGBTQ+ youth with their identities and
+        goals. After noticing the vast disparities between BIPOC and LGBTQ+
+        youth, Youth Professionals decided to address these issues. Founded in
+        the summer of 2020, Youth Professionals provides youth with essential
+        leadership skills. Through webinars, workshops and engaging social media
+        posts, Youth Professionals hopes to welcome youth all over the world.
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $('#slideshow > div:gt(0)').hide();
+
+      setInterval(function () {
+        $('#slideshow > div:first')
+          .fadeOut(2000)
+          .next()
+          .fadeIn(2000)
+          .end()
+          .appendTo('#slideshow');
+      }, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youth Professionals</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="images/yp_logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/yp_logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Get Involved</a>
+      <div id="indicator"></div>
+    </nav>
+    <div class="title">
+      <h1>Youth Professionals Podcast</h1>
+    </div>
+    <div class="column">
+      <h3>You Tell Me.</h3>
+      <p>
+        Youth Professionals is introducing our very first podcast: You Tell Me
+        You Tell Me will host interviews with change makers, activists and
+        discuss current events. We will talk about human rights and discuss the
+        interesting lives of people all over the world. Check out
+        <a href='http://instagram.com/theyoutellme/'>our instagram</a> for more information.
+      </p>
+    </div>
+    <div class="column-right">
+      <div id="slideshow">
+        <div>
+          <img src="img/p1.jpg">
+        </div>
+        <div>
+          <img src="img/p2.jpg">
+        </div>
+     </div>
+    </div>
+    <script src="myscripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $('#slideshow > div:gt(0)').hide();
+
+      setInterval(function () {
+        $('#slideshow > div:first')
+          .fadeOut(2000)
+          .next()
+          .fadeIn(2000)
+          .end()
+          .appendTo('#slideshow');
+      }, 3000);
+    </script>
+  </body>
+</html>
